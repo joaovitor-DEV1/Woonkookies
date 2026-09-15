@@ -1,0 +1,544 @@
+/* ==========================================
+   VARIÁVEIS DE CORES (PALETA WONKOOKIES)
+   ========================================== */
+:root {
+    --berry-sherb: #80011F;
+    --vanilla-biscuit: #FFFBEF;
+    --espresso: #5B1F00;
+    --caramel: #F4C77E;
+    --caramel-hover: #E3B265;
+    --berry-dark: #5A0015;
+    --whatsapp-green: #25D366;
+    --whatsapp-green-hover: #1eb956;
+    --card-shadow: 0 8px 24px rgba(91, 31, 0, 0.08);
+}
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--vanilla-biscuit);
+    color: var(--espresso);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .brand-font {
+    font-family: 'Fredoka', cursive, sans-serif;
+}
+
+/* ==========================================
+   HEADER & NAVBAR
+   ========================================== */
+header {
+    background-color: var(--berry-sherb);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--caramel);
+}
+
+.logo-text {
+    color: var(--caramel);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--vanilla-biscuit);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--caramel);
+}
+
+.cart-btn-nav {
+    background-color: var(--caramel);
+    color: var(--espresso);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.cart-btn-nav:hover {
+    background-color: var(--caramel-hover);
+    transform: translateY(-2px);
+}
+
+.cart-badge {
+    background-color: var(--berry-sherb);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, var(--berry-sherb) 0%, var(--espresso) 100%);
+    color: var(--vanilla-biscuit);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo-large {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--caramel);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--caramel);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--caramel);
+    color: var(--espresso);
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(244, 199, 126, 0.4);
+}
+
+.cta-btn:hover {
+    background-color: var(--caramel-hover);
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   CARDÁPIO SECTION
+   ========================================== */
+.menu-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--berry-sherb);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--espresso);
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(91, 31, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(91, 31, 0, 0.15);
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f7eed8;
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    color: var(--berry-sherb);
+    margin-bottom: 0.5rem;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--espresso);
+}
+
+.add-to-cart-btn {
+    background-color: var(--berry-sherb);
+    color: var(--vanilla-biscuit);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--berry-dark);
+}
+
+/* ==========================================
+   ÁREA DE PEDIDOS E CARRINHO
+   ========================================== */
+.order-section {
+    background-color: white;
+    padding: 4rem 1.5rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--caramel);
+}
+
+.order-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+}
+
+.cart-box, .checkout-form-box {
+    background: var(--vanilla-biscuit);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid var(--caramel);
+}
+
+.cart-box h3, .checkout-form-box h3 {
+    color: var(--berry-sherb);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--caramel);
+    padding-bottom: 0.5rem;
+}
+
+.cart-items {
+    max-height: 320px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.empty-cart-msg {
+    color: #777;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed rgba(91, 31, 0, 0.2);
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--espresso);
+}
+
+.cart-item-unit-price {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-item-subtotal {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.qty-btn {
+    background: var(--caramel);
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--espresso);
+}
+
+.cart-total-container {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--berry-sherb);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--espresso);
+}
+
+/* FORMULÁRIO DE CHECKOUT */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--espresso);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #d1b894;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--espresso);
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: var(--berry-sherb);
+}
+
+.submit-order-btn {
+    width: 100%;
+    background-color: var(--whatsapp-green);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit-order-btn i {
+    font-size: 1.4rem;
+}
+
+.submit-order-btn:hover {
+    background-color: var(--whatsapp-green-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   FOOTER (RODAPÉ)
+   ========================================== */
+footer {
+    background-color: var(--espresso);
+    color: var(--vanilla-biscuit);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   TOAST (NOTIFICAÇÃO FLUTUANTE)
+   ========================================== */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--berry-sherb);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 2000;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   RESPONSIVIDADE (CELULARES E TABLETS)
+   ========================================== */
+@media (max-width: 850px) {
+    .order-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none; /* Em dispositivos menores foca no botão do carrinho */
+    }
+}
+/* ==========================================
+   RODAPÉ (FOOTER) E ÍCONES DE REDES SOCIAIS
+   ========================================== */
+.site-footer {
+    background-color: #80011F; /* Cor vinho/bordô tema da Wonkookies */
+    color: #FFF9F2;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 3px solid #600017;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse por cima do Instagram */
+.social-icon.insta-link:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao passar o mouse por cima do WhatsApp */
+.social-icon.whatsapp-link:hover {
+    background-color: #25D366;
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

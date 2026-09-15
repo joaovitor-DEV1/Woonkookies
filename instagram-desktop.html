@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonkookies (@wonkookies) • Fotos e vídeos do Instagram</title>
+    
+    <!-- FontAwesome para os Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="instagram-desktop.css">
+</head>
+<body>
+
+    <!-- BARRA LATERAL (SIDEBAR DE NAVEGAÇÃO) -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <h2>Instagram</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i><span>Página inicial</span></a>
+            <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i><span>Pesquisa</span></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-compass"></i><span>Explorar</span></a>
+            <a href="#" class="nav-item"><i class="fa-solid fa-clapperboard"></i><span>Reels</span></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-paper-plane"></i><span>Mensagens</span></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-heart"></i><span>Notificações</span></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-square-plus"></i><span>Criar</span></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-user"></i><span>Perfil</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item"><i class="fa-solid fa-bars"></i><span>Mais</span></a>
+        </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+    <main class="main-content">
+        <div class="profile-container">
+            
+            <!-- CABEÇALHO DO PERFIL -->
+            <header class="profile-header">
+                <div class="avatar-area">
+                    <div class="avatar-ring">
+                        <img src="images/logo.jpeg" alt="Wonkookies Logo" class="profile-avatar" onerror="this.src='images/WhatsApp Image 2026-09-15 at 09.42.20.jpeg'">
+                    </div>
+                </div>
+
+                <div class="info-area">
+                    <!-- Linha 1: Nome de usuário e Botões -->
+                    <div class="info-row-1">
+                        <h1 class="username">wonkookies</h1>
+                        <button class="btn btn-primary">Seguindo <i class="fa-solid fa-chevron-down"></i></button>
+                        <button class="btn btn-secondary">Enviar mensagem</button>
+                        <button class="btn-icon-only"><i class="fa-solid fa-user-check"></i></button>
+                        <button class="btn-icon-only"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+
+                    <!-- Linha 2: Estatísticas -->
+                    <div class="info-row-2">
+                        <span><strong>42</strong> publicações</span>
+                        <span><strong>25,4 mil</strong> seguidores</span>
+                        <span><strong>180</strong> seguindo</span>
+                    </div>
+
+                    <!-- Linha 3: Biografia -->
+                    <div class="info-row-3">
+                        <span class="full-name">Wonkookies | A Magia dos Cookies Artesanais</span>
+                        <span class="category">Empresa de alimentos e bebidas</span>
+                        <p class="bio-description">
+                            🍪 A magia dos cookies artesanais mais recheados e crocantes!<br>
+                            ⏰ Aberto de segunda a sábado, das 10h às 20h<br>
+                            📍 Entrega rápida & Retirada na loja
+                        </p>
+                        <a href="index.html" class="bio-link" target="_blank"><i class="fa-solid fa-link"></i> www.wonkookies.com.br</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- DESTAQUES (STORIES FIXOS) -->
+            <section class="highlights">
+                <div class="highlight-item">
+                    <div class="highlight-ring">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=150&q=80" alt="Cardápio">
+                    </div>
+                    <span>Cardápio 🍪</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-ring">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=150&q=80" alt="Combos">
+                    </div>
+                    <span>Caixa Mágica</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-ring">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=150&q=80" alt="Entregas">
+                    </div>
+                    <span>Feedbacks ❤️</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-ring">
+                        <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=150&q=80" alt="Nossa Loja">
+                    </div>
+                    <span>Nossa Loja 📍</span>
+                </div>
+            </section>
+
+            <!-- ABAS DE NAVEGAÇÃO DO PERFIL -->
+            <nav class="profile-tabs">
+                <a href="#" class="tab-item active"><i class="fa-solid fa-table-cells"></i> PUBLICAÇÕES</a>
+                <a href="#" class="tab-item"><i class="fa-solid fa-clapperboard"></i> REELS</a>
+                <a href="#" class="tab-item"><i class="fa-regular fa-bookmark"></i> SALVOS</a>
+                <a href="#" class="tab-item"><i class="fa-solid fa-clipboard-user"></i> MARCADOS</a>
+            </nav>
+
+            <!-- GRADE DE PUBLICAÇÕES (3 COLUNAS) -->
+            <section class="posts-grid">
+                
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Cookie Red Velvet">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 1.240</span>
+                        <span><i class="fa-solid fa-comment"></i> 84</span>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Cookie Recheado de Caramelo">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 2.180</span>
+                        <span><i class="fa-solid fa-comment"></i> 142</span>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Classic Choco Chunk">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 950</span>
+                        <span><i class="fa-solid fa-comment"></i> 32</span>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Caixa Mágica de Cookies">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 3.410</span>
+                        <span><i class="fa-solid fa-comment"></i> 215</span>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" alt="Nutella Supreme">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 1.890</span>
+                        <span><i class="fa-solid fa-comment"></i> 97</span>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Sanduíche Wonka Gelado">
+                    <div class="post-overlay">
+                        <span><i class="fa-solid fa-heart"></i> 2.730</span>
+                        <span><i class="fa-solid fa-comment"></i> 164</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

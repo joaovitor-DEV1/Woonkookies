@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonkookies | A Magia dos Cookies Artesanais</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR / CABEÇALHO -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo-container">
+                <img src="images/logo.jpeg" alt="Wonkookies Logo" class="logo-img">
+                <span class="logo-text">Wonkookies</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#fazer-pedido">Fazer Pedido</a></li>
+            </ul>
+            <button class="cart-btn-nav" onclick="scrollToOrder()">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <span>Meu Pedido</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION (DESTAQUE) -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <img src="images/logo.jpeg" alt="Wonkookies Logo Principal" class="hero-logo-large">
+            <h1>Wonkookies</h1>
+            <p>Descubra o sabor mágico e artesanal dos cookies mais recheados e crocantes. Feitos diariamente com ingredientes selecionados!</p>
+            <a href="#cardapio" class="cta-btn"><i class="fa-solid fa-utensils"></i> Ver Cardápio & Encomendar</a>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO DE COOKIES E DOCES -->
+    <section class="menu-section" id="cardapio">
+        <h2 class="section-title">Nosso Cardápio Mágico</h2>
+        <p class="section-subtitle">Escolha seus cookies e doces favoritos para adicionar ao pedido</p>
+
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Cookie Red Velvet" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Red Velvet Berry</h3>
+                    <p class="product-desc">Massa de cacau vermelho aveludada, recheada com um irresistível cream cheese artesanal.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 14,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Red Velvet Berry', 14.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Cookie Clássico Choco" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Classic Choco Chunk</h3>
+                    <p class="product-desc">Massa de baunilha Vanilla Biscuit com generosos pedaços de chocolate nobre meio amargo.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 12,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Classic Choco Chunk', 12.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Cookie Caramelo Espresso" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Caramel & Espresso</h3>
+                    <p class="product-desc">Combinação perfeita de caramelo cremoso, flor de sal e um toque especial de café espresso.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 15,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Caramel & Espresso', 15.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" alt="Cookie Nutella Supreme" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Nutella Supreme</h3>
+                    <p class="product-desc">Cookie super macio por dentro e crocante por fora, transbordando recheio puro de Nutella.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 16,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Nutella Supreme', 16.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Caixa Mágica de Cookies" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Caixa Mágica (4 Unid.)</h3>
+                    <p class="product-desc">Monte sua caixa especial com 4 sabores à sua escolha. Perfeito para presentear!</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 50,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Caixa Mágica (4 Unid.)', 50.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Cookie Sandwich Sorvete" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Sanduíche Wonka Gelado</h3>
+                    <p class="product-desc">Dois cookies quentinhos recheados com uma generosa bola de sorvete artesanal de creme.</p>
+                    <div class="product-bottom">
+                        <span class="product-price">R$ 18,00</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Sanduíche Wonka Gelado', 18.00)">
+                            <i class="fa-solid fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREA PARA FAZER PEDIDO (CARRINHO & FORMULÁRIO) -->
+    <section class="order-section" id="fazer-pedido">
+        <h2 class="section-title">Área de Pedidos</h2>
+        <p class="section-subtitle">Confira os itens selecionados e finalize seu pedido diretamente conosco sem precisar criar conta!</p>
+
+        <div class="order-container">
+            <!-- Carrinho de Compras -->
+            <div class="cart-box">
+                <h3><i class="fa-solid fa-basket-shopping"></i> Seu Carrinho</h3>
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart-msg">Seu carrinho está vazio. Escolha algumas delícias no cardápio acima!</p>
+                </div>
+                <div class="cart-total-container">
+                    <span>Total do Pedido:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+            </div>
+
+            <!-- Formulário de Entrega/Retirada -->
+            <div class="checkout-form-box">
+                <h3><i class="fa-solid fa-paper-plane"></i> Dados para Entrega</h3>
+                <form id="orderForm" onsubmit="handleCheckout(event)">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome *</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp / Telefone *</label>
+                        <input type="tel" id="telefone" required placeholder="(00) 90000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoEntrega">Opção de Entrega *</label>
+                        <select id="tipoEntrega" required onchange="toggleEndereco()">
+                            <option value="Entrega em Domicílio">Entrega em Domicílio</option>
+                            <option value="Retirada no Balcão">Retirada na Loja</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="enderecoGroup">
+                        <label for="endereco">Endereço de Entrega *</label>
+                        <input type="text" id="endereco" placeholder="Rua, número, bairro e complemento">
+                    </div>
+                    <div class="form-group">
+                        <label for="pagamento">Forma de Pagamento *</label>
+                        <select id="pagamento" required>
+                            <option value="PIX">PIX (Chave enviada no atendimento)</option>
+                            <option value="Cartão de Crédito/Débito">Cartão na Entrega</option>
+                            <option value="Dinheiro">Dinheiro (Abonar troco)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacao">Observações / Preferências</label>
+                        <textarea id="observacao" rows="2" placeholder="Ex: Sem nozes, mandar troco para 50, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-order-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar Pedido pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Wonkookies</strong> &copy; 2026 - Todos os direitos reservados.</p>
+        <p>Feito com amor, chocolate e magia! 🍪✨</p>
+    </footer>
+
+    <!-- NOTIFICAÇÃO TOAST -->
+    <div class="toast" id="toast">Item adicionado ao seu pedido! 🍪</div>
+
+    <!-- LÓGICA DO CARRINHO E PEDIDO -->
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: name, price: price, quantity: 1 });
+            }
+            updateCartUI();
+            showToast(`${name} adicionado ao pedido!`);
+        }
+
+        function changeQuantity(name, delta) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+            const cartBadge = document.getElementById('cartBadge');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartBadge.textContent = totalCount;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-msg">Seu carrinho está vazio. Escolha algumas delícias no cardápio acima!</p>';
+                cartTotalElement.textContent = 'R$ 0,00';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="cart-item">
+                        <div>
+                            <div class="cart-item-name">${item.name}</div>
+                            <small class="cart-item-unit-price">R$ ${item.price.toFixed(2)} cada</small>
+                        </div>
+                        <div class="cart-item-controls">
+                            <button class="qty-btn" onclick="changeQuantity('${item.name}', -1)">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-btn" onclick="changeQuantity('${item.name}', 1)">+</button>
+                            <span class="cart-item-subtotal">R$ ${itemTotal.toFixed(2)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartItemsContainer.innerHTML = html;
+            cartTotalElement.textContent = `R$ ${total.toFixed(2)}`;
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2500);
+        }
+
+        function scrollToOrder() {
+            document.getElementById('fazer-pedido').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleEndereco() {
+            const tipo = document.getElementById('tipoEntrega').value;
+            const enderecoGroup = document.getElementById('enderecoGroup');
+            const enderecoInput = document.getElementById('endereco');
+
+            if (tipo === 'Retirada no Balcão') {
+                enderecoGroup.style.display = 'none';
+                enderecoInput.removeAttribute('required');
+            } else {
+                enderecoGroup.style.display = 'block';
+                enderecoInput.setAttribute('required', 'true');
+            }
+        }
+
+        function handleCheckout(event) {
+            event.preventDefault();
+
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio! Adicione pelo menos um doce para enviar o pedido.');
+                return;
+            }
+
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const tipoEntrega = document.getElementById('tipoEntrega').value;
+            const endereco = document.getElementById('endereco').value;
+            const pagamento = document.getElementById('pagamento').value;
+            const observacao = document.getElementById('observacao').value;
+
+            let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            let message = `*--- NOVO PEDIDO WONKOOKIES ---*\n\n`;
+            message += `👤 *Cliente:* ${nome}\n`;
+            message += `📞 *Telefone:* ${telefone}\n`;
+            message += `📍 *Opção:* ${tipoEntrega}\n`;
+            if (tipoEntrega === 'Entrega em Domicílio') {
+                message += `🏠 *Endereço:* ${endereco}\n`;
+            }
+            message += `💳 *Pagamento:* ${pagamento}\n\n`;
+            message += `*🛒 ITENS DO PEDIDO:*\n`;
+
+            cart.forEach(item => {
+                message += `• ${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
+            });
+
+            message += `\n💰 *TOTAL:* R$ ${total.toFixed(2)}\n`;
+
+            if (observacao) {
+                message += `\n📝 *Obs:* ${observacao}\n`;
+            }
+
+            // Coloque seu número de WhatsApp aqui com DDD
+            const whatsappNumber = "5511974349558"; 
+            const encodedMessage = encodeURIComponent(message);
+            
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+    <!-- RODAPÉ DO SITE COM REDES SOCIAIS -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 Wonkookies. A Magia dos Cookies Artesanais.</p>
+        
+        <div class="social-links">
+            <!-- Ícone do Instagram vinculando para a tela do Instagram Desktop -->
+            <a href="instagram-desktop.html" target="_blank" class="social-icon insta-link" title="Siga a Wonkookies no Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            
+            <!-- Ícone do WhatsApp (opcional) -->
+            <a href="https://wa.me/5511999999999" target="_blank" class="social-icon whatsapp-link" title="Fale conosco pelo WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
